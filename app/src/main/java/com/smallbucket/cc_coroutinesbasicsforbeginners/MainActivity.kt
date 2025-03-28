@@ -1,16 +1,14 @@
 package com.smallbucket.cc_coroutinesbasicsforbeginners
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import com.smallbucket.cc_coroutinesbasicsforbeginners.my1coroutinescopeandcontext.APP_TAG
 import com.smallbucket.cc_coroutinesbasicsforbeginners.ui.theme.CCCoroutinesBasicsForBeginnersTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,28 +18,28 @@ class MainActivity : ComponentActivity() {
         setContent {
             CCCoroutinesBasicsForBeginnersTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    Log.d(APP_TAG, "CoroutineScopeCoroutineContext: main thread = ${Thread.currentThread().name}")
+
+//                    CoroutineScopeCoroutineContext(innerPadding)
+//                    Test(innerPadding)
+                    ObjectsClasses(innerPadding)
                 }
             }
         }
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
+
+fun main() {
+//    classes1()
+//    classes2()
+//    constructorsPrimarySecondary()
+//    getterSetterLateInit()
+//    InheritanceConcept()
+    overridingAndInheritanceConcept()
 }
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    CCCoroutinesBasicsForBeginnersTheme {
-        Greeting("Android")
-    }
-}
+// output : both threads run on main thread
+//
+//D  CoroutineScopeCoroutineContext: main thread = main
+//D  CoroutineScopeCoroutineContext: increment =  main
