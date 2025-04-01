@@ -6,7 +6,6 @@ fun main() {
     println(pizza.toppings)
   //  val pizza2 = Pizza("", "")
 // Can no longer make object of Pizza class wthout create() function
-
 }
 
 class Pizza private constructor(val type: String, val toppings: String) {
@@ -18,7 +17,6 @@ class Pizza private constructor(val type: String, val toppings: String) {
                     "Peppy Paneer",
                     toppings = "Peppy Paneer, cheeze burst, onion, Tomato, Cheeze"
                 )
-
                 else -> Pizza("basic", "veggies")
             }
         }
