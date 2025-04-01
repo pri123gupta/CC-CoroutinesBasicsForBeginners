@@ -36,7 +36,11 @@ fun main() {
 //    constructorsPrimarySecondary()
 //    getterSetterLateInit()
 //    InheritanceConcept()
-    overridingAndInheritanceConcept()
+//    overridingAndInheritanceConcept()
+//    Polymorphism()
+        PolymorphismAndInheritance()
+
+
 }
 
 // output : both threads run on main thread
