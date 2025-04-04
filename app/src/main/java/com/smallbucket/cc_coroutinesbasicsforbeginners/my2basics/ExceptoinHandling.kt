@@ -1,4 +1,4 @@
-package com.smallbucket.cc_coroutinesbasicsforbeginners.basics
+package com.smallbucket.cc_coroutinesbasicsforbeginners.my2basics
 
 fun main() {
     val ar = arrayOf(1, 2, 3)

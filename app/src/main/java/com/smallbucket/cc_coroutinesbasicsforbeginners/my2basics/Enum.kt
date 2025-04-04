@@ -1,4 +1,4 @@
-package com.smallbucket.cc_coroutinesbasicsforbeginners.basics
+package com.smallbucket.cc_coroutinesbasicsforbeginners.my2basics
 
 enum class Day(val num: Int) {
     SUN(1),
