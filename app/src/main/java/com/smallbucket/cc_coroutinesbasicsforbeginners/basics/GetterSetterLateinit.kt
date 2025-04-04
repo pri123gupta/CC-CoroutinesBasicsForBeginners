@@ -1,4 +1,4 @@
-package com.smallbucket.cc_coroutinesbasicsforbeginners
+package com.smallbucket.cc_coroutinesbasicsforbeginners.basics
 
 fun getterSetterLateInit() {
     val ob = Calculator() // no constructor, so default constructor is added

@@ -1,6 +1,4 @@
-package com.smallbucket.cc_coroutinesbasicsforbeginners
-
-import androidx.compose.ui.input.key.Key.Companion.D
+package com.smallbucket.cc_coroutinesbasicsforbeginners.basics
 
 fun main() {
 //    filterFn()

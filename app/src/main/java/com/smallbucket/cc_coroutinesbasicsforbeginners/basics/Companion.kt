@@ -1,6 +1,4 @@
-package com.smallbucket.cc_coroutinesbasicsforbeginners
-
-import com.smallbucket.cc_coroutinesbasicsforbeginners.MyClass.MyObject.f
+package com.smallbucket.cc_coroutinesbasicsforbeginners.basics
 
 
 class MyClass_ {         //Class

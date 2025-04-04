@@ -1,4 +1,4 @@
-package com.smallbucket.cc_coroutinesbasicsforbeginners;
+package com.smallbucket.cc_coroutinesbasicsforbeginners.basics;
 
 public class MyMAin {
     public static void main(String[] args) {

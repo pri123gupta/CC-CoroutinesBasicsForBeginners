@@ -1,4 +1,4 @@
-package com.smallbucket.cc_coroutinesbasicsforbeginners
+package com.smallbucket.cc_coroutinesbasicsforbeginners.basics
 
 fun AccessModifiers(){
 
@@ -10,7 +10,7 @@ open class A1{
    internal val r=30
    protected val s=40
 }
-class B:A1(){
+class B: A1(){
     fun display(){
         println(p)   // 10
        // println(q) // error

@@ -1,4 +1,4 @@
-package com.smallbucket.cc_coroutinesbasicsforbeginners
+package com.smallbucket.cc_coroutinesbasicsforbeginners.basics
 
 fun main() {
     val text = "hello world"

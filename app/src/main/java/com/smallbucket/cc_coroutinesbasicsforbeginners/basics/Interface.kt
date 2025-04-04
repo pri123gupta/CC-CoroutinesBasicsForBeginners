@@ -1,6 +1,4 @@
-package com.smallbucket.cc_coroutinesbasicsforbeginners
-
-import androidx.compose.material3.MaterialTheme.shapes
+package com.smallbucket.cc_coroutinesbasicsforbeginners.basics
 
 /*
 interface Draggable{

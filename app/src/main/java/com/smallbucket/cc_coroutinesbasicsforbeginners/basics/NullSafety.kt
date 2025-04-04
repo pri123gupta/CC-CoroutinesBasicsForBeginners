@@ -1,6 +1,4 @@
-package com.smallbucket.cc_coroutinesbasicsforbeginners
-
-import java.util.Locale
+package com.smallbucket.cc_coroutinesbasicsforbeginners.basics
 
 fun main() {
     val gender = "Male" // M F Others, non nullable data type

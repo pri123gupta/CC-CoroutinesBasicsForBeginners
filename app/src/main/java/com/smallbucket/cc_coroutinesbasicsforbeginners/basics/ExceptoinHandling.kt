@@ -1,6 +1,4 @@
-package com.smallbucket.cc_coroutinesbasicsforbeginners
-
-import androidx.collection.IntList
+package com.smallbucket.cc_coroutinesbasicsforbeginners.basics
 
 fun main() {
     val ar = arrayOf(1, 2, 3)

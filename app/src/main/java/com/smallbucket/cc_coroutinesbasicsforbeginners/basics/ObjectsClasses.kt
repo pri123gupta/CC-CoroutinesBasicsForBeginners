@@ -1,4 +1,4 @@
-package com.smallbucket.cc_coroutinesbasicsforbeginners
+package com.smallbucket.cc_coroutinesbasicsforbeginners.basics
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.runtime.Composable
