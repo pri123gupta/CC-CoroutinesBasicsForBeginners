@@ -55,7 +55,6 @@ suspend fun printFollowersUsingLaunch() {
     Log.d(APP_TAG, "Fb - ${fbFollowers} , Insta - ${instaFollowers}") // Fb - 54 , Insta - 72
 }
 
-
 suspend fun printFollowersUsingAsync() {
     val defered1 = CoroutineScope(Dispatchers.Main).async {
         // returns Deferred<T>, T is return type of last statement of this function
@@ -69,19 +68,17 @@ suspend fun printFollowersUsingAsync() {
     val defered2 = CoroutineScope(Dispatchers.Main).async {
         getInstaFollowers()
     }
-
     Log.d(
         APP_TAG,
         "Fb - ${defered1.await()} , Insta - ${defered2.await()}  (Async)"
     ) // Fb - 54 , Insta - 72  (Async)")
-
 }
 
 suspend fun printFollowersUsingAsyncCombined() {
     val def1 = CoroutineScope(Dispatchers.Main).async {
-
+        var fb = getFbFollowers()
+        var insta = getInstaFollowers()
     }
-
 }
 
 suspend fun printFollowersUsingLaunchCombined() {
