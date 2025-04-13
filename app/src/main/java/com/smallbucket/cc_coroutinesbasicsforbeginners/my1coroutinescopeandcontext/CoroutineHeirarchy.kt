@@ -6,6 +6,7 @@ import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 
 fun CoroutineHeirarchy() {
@@ -13,7 +14,8 @@ fun CoroutineHeirarchy() {
 //        executeFn()
 //        executeFn2()
 //        executeFn3()
-        executeFn4()
+//        executeFn4()
+        executeFn5()
     }
 }
 
@@ -50,13 +52,18 @@ suspend fun executeFn2() {
         delay(3000)
         Log.d(APP_TAG, "parent job ended ")
     }
-    delay(1000)
+    delay(4000)
     parent.cancel()
     parent.join()
     Log.d(APP_TAG, "parent completed ")
 }
+//o/p
+//D  parent job started
+//D  child job started
+//D  parent completed
 
 suspend fun executeFn3() {
+    // If we ourselves want to cancel child jobs .
     val parent = GlobalScope.launch(Dispatchers.Main) {
         Log.d(APP_TAG, "parent job started ")
         val child = launch(Dispatchers.IO) {
@@ -64,7 +71,6 @@ suspend fun executeFn3() {
             delay(5000)
             Log.d(APP_TAG, "child job ended ")
         }
-
         delay(3000)
         Log.d(APP_TAG, "child job cancelled ")
         child.cancel()
@@ -97,4 +103,31 @@ suspend fun executeFn4() {
     }
     parent.join()
     Log.d(APP_TAG, "parent completed ")
+}
+//o/p
+//parent job started
+//child job started
+//parent ended
+//child job cancelled
+//parent completed
+
+suspend fun executeFn5() {
+    val parent = GlobalScope.launch(Dispatchers.IO) {
+        for (i in 1..1000) {
+            if (isActive) {
+                executeLongRunningTask()
+                Log.d(APP_TAG, "$i")
+            }
+        }
+    }
+    delay(100)
+    Log.d(APP_TAG, "cancelling job")
+    parent.cancel()
+    parent.join()
+    Log.d(APP_TAG, "parent completed job")
+}
+
+fun executeLongRunningTask() {
+    for (i in 1..10000000) {
+    }
 }
