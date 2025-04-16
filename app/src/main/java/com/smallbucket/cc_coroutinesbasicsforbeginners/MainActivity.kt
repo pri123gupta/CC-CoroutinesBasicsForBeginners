@@ -22,8 +22,8 @@ import com.smallbucket.cc_coroutinesbasicsforbeginners.my1coroutinescopeandconte
 import com.smallbucket.cc_coroutinesbasicsforbeginners.my1coroutinescopeandcontext.CoroutineScopeCoroutineContext
 import com.smallbucket.cc_coroutinesbasicsforbeginners.my1coroutinescopeandcontext.MainViewModel
 import com.smallbucket.cc_coroutinesbasicsforbeginners.my2basics.PolymorphismAndInheritance
-import com.smallbucket.cc_coroutinesbasicsforbeginners.my3flowschannels.ChannelsActivity
-import com.smallbucket.cc_coroutinesbasicsforbeginners.my3flowschannels.FlowsActivity
+//import com.smallbucket.cc_coroutinesbasicsforbeginners.my3flowschannels.FlowBuilderActivity
+import com.smallbucket.cc_coroutinesbasicsforbeginners.my3flowschannels.FlowOperatorsTerminalMapFilterBufferActivity
 import com.smallbucket.cc_coroutinesbasicsforbeginners.ui.theme.CCCoroutinesBasicsForBeginnersTheme
 
 class MainActivity : ComponentActivity() {
@@ -56,7 +56,9 @@ class MainActivity : ComponentActivity() {
 
 
 //        startActivity(Intent(this@MainActivity, FlowsActivity::class.java))
-        startActivity(Intent(this@MainActivity, ChannelsActivity::class.java))
+//        startActivity(Intent(this@MainActivity, ChannelsActivity::class.java))
+//        startActivity(Intent(this@MainActivity, FlowBuilderActivity::class.java))
+        startActivity(Intent(this@MainActivity, FlowOperatorsTerminalMapFilterBufferActivity::class.java))
 
 
     }
