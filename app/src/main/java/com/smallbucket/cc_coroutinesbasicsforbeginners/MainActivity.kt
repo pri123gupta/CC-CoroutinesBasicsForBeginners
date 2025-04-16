@@ -22,6 +22,7 @@ import com.smallbucket.cc_coroutinesbasicsforbeginners.my1coroutinescopeandconte
 import com.smallbucket.cc_coroutinesbasicsforbeginners.my1coroutinescopeandcontext.CoroutineScopeCoroutineContext
 import com.smallbucket.cc_coroutinesbasicsforbeginners.my1coroutinescopeandcontext.MainViewModel
 import com.smallbucket.cc_coroutinesbasicsforbeginners.my2basics.PolymorphismAndInheritance
+import com.smallbucket.cc_coroutinesbasicsforbeginners.my3flowschannels.ContextPreservationFlowOnExceptionHandlingActivity
 //import com.smallbucket.cc_coroutinesbasicsforbeginners.my3flowschannels.FlowBuilderActivity
 import com.smallbucket.cc_coroutinesbasicsforbeginners.my3flowschannels.FlowOperatorsTerminalMapFilterBufferActivity
 import com.smallbucket.cc_coroutinesbasicsforbeginners.ui.theme.CCCoroutinesBasicsForBeginnersTheme
@@ -40,12 +41,12 @@ class MainActivity : ComponentActivity() {
 //        CoroutineHeirarchy()
 //        WithContextRunblocking()
 
-  /*      vm = ViewModelProvider(this).get(MainViewModel::class.java) // ViewModelScopeFn()
-        lifecycleScope.launch {
-            delay(2000)
-            startActivity(Intent(this@MainActivity, FlowsChannelsActivity2::class.java))
-            finish() // to destroy lifecycleScope
-        }*/
+        /*      vm = ViewModelProvider(this).get(MainViewModel::class.java) // ViewModelScopeFn()
+              lifecycleScope.launch {
+                  delay(2000)
+                  startActivity(Intent(this@MainActivity, FlowsChannelsActivity2::class.java))
+                  finish() // to destroy lifecycleScope
+              }*/
         // Output - after 2 sec. vm is destroyed
 //        hello from me
 //        hello from me
@@ -54,11 +55,11 @@ class MainActivity : ComponentActivity() {
 //        hello from me
 //        vm destroyed      // after 2 sec. vm is destroyed
 
-
 //        startActivity(Intent(this@MainActivity, FlowsActivity::class.java))
 //        startActivity(Intent(this@MainActivity, ChannelsActivity::class.java))
 //        startActivity(Intent(this@MainActivity, FlowBuilderActivity::class.java))
-        startActivity(Intent(this@MainActivity, FlowOperatorsTerminalMapFilterBufferActivity::class.java))
+        //startActivity(Intent(this@MainActivity, FlowOperatorsTerminalMapFilterBufferActivity::class.java))
+        startActivity(Intent(this@MainActivity, ContextPreservationFlowOnExceptionHandlingActivity::class.java))
 
 
     }
@@ -100,7 +101,7 @@ fun coroutineFn(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun basicTextview(text :String = "Hello World") {
+fun basicTextview(text: String = "Hello World") {
 
     Column(
         Modifier.fillMaxSize(1f),
