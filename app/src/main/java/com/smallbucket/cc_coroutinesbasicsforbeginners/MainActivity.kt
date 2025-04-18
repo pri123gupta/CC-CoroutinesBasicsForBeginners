@@ -2,6 +2,7 @@ package com.smallbucket.cc_coroutinesbasicsforbeginners
 
 //import com.smallbucket.cc_coroutinesbasicsforbeginners.my1coroutinescopeandcontext.LaunchVsAsyncAwait
 //import com.smallbucket.cc_coroutinesbasicsforbeginnersasicsforbeginners.my1coroutinescopeandcontext.corroutineHeirarchy
+//import com.smallbucket.cc_coroutinesbasicsforbeginners.my3flowschannels.FlowBuilderActivity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -22,9 +23,8 @@ import com.smallbucket.cc_coroutinesbasicsforbeginners.my1coroutinescopeandconte
 import com.smallbucket.cc_coroutinesbasicsforbeginners.my1coroutinescopeandcontext.CoroutineScopeCoroutineContext
 import com.smallbucket.cc_coroutinesbasicsforbeginners.my1coroutinescopeandcontext.MainViewModel
 import com.smallbucket.cc_coroutinesbasicsforbeginners.my2basics.PolymorphismAndInheritance
-import com.smallbucket.cc_coroutinesbasicsforbeginners.my3flowschannels.ContextPreservationFlowOnExceptionHandlingActivity
-//import com.smallbucket.cc_coroutinesbasicsforbeginners.my3flowschannels.FlowBuilderActivity
-import com.smallbucket.cc_coroutinesbasicsforbeginners.my3flowschannels.FlowOperatorsTerminalMapFilterBufferActivity
+import com.smallbucket.cc_coroutinesbasicsforbeginners.my3flowschannels.SharedFlowActivity
+import com.smallbucket.cc_coroutinesbasicsforbeginners.my3flowschannels.StateFlowActivity
 import com.smallbucket.cc_coroutinesbasicsforbeginners.ui.theme.CCCoroutinesBasicsForBeginnersTheme
 
 class MainActivity : ComponentActivity() {
@@ -59,7 +59,9 @@ class MainActivity : ComponentActivity() {
 //        startActivity(Intent(this@MainActivity, ChannelsActivity::class.java))
 //        startActivity(Intent(this@MainActivity, FlowBuilderActivity::class.java))
         //startActivity(Intent(this@MainActivity, FlowOperatorsTerminalMapFilterBufferActivity::class.java))
-        startActivity(Intent(this@MainActivity, ContextPreservationFlowOnExceptionHandlingActivity::class.java))
+//        startActivity(Intent(this@MainActivity, ContextPreservationFlowOnExceptionHandlingActivity::class.java))
+//        startActivity(Intent(this@MainActivity, SharedFlowActivity::class.java))
+        startActivity(Intent(this@MainActivity, StateFlowActivity::class.java))
 
 
     }

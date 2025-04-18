@@ -13,6 +13,12 @@
         android:theme="@style/Theme.CCCoroutinesBasicsForBeginners"
         tools:targetApi="31">
         <activity
+            android:name=".my3flowschannels.StateFlowActivity"
+            android:exported="false" />
+        <activity
+            android:name=".my3flowschannels.SharedFlowActivity"
+            android:exported="false" />
+        <activity
             android:name=".my3flowschannels.ContextPreservationFlowOnExceptionHandlingActivity"
             android:exported="false" />
         <activity
